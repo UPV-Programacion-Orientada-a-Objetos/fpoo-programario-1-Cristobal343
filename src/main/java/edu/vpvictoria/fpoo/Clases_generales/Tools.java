@@ -26,10 +26,9 @@ public class Tools {
         return Double.parseDouble(a);
     }
 
-    public double round(float a){   // Este metodo lo cree para que pueda redondear flotantes o doubles a dos cifras despues del punto
+    public String round(String a){   // Este metodo lo cree para que pueda redondear flotantes o doubles a dos cifras despues del punto
         DecimalFormat float_roudn = new DecimalFormat("0.00");
-        float d = 
-        return d;
+        return float_roudn.format(toDouble(a));
     }
 
 }

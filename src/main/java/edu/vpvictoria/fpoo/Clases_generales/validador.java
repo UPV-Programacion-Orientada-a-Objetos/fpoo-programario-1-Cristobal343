@@ -1,6 +1,5 @@
 package edu.vpvictoria.fpoo.Clases_generales;
-import java.io.IOException;
-import java.math.BigDecimal;
+
 public class validador{
 
 

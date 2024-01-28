@@ -17,7 +17,6 @@ public class suma {
     public float sumar(float a, int b){ return a + b; }
 
     public String sumar(String a, String b) {
-        auxiliar = null;
 
         if (valid.isanumber(a) == "isanumber" && valid.isanumber(b) == "isanumber") {
 
@@ -27,10 +26,9 @@ public class suma {
                     auxiliar = Float.toString(sumar(Float.parseFloat(a), Float.parseFloat(b)));
                 } else if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isafloat") {
                     auxiliar = Float.toString(sumar(Integer.parseInt(a), Float.parseFloat(b)));
-                } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainterger") {
+                } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainteger") {
                     auxiliar = Float.toString(sumar(Float.parseFloat(a), Integer.parseInt(b)));
                 }
-
             } else {
                 System.out.printf("Los campos necesitados no son numeros");
             }

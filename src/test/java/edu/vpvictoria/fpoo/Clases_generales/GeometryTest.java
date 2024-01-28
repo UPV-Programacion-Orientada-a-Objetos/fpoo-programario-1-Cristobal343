@@ -10,8 +10,14 @@ public class GeometryTest extends TestCase {
     }
 
     public void testArea_del_triangulo() {
+        assertEquals("7.5", new Geometry().area_del_triangulo("3","5"));
     }
 
     public void testArea_del_rectangulo() {
+        assertEquals("20", new Geometry().area_del_rectangulo("2","10"));
+        assertEquals("87.75", new Geometry().area_del_rectangulo("13.5","6.5"));
+        assertEquals("20", new Geometry().area_del_rectangulo("2","10"));
+        assertEquals("87.75", new Geometry().area_del_rectangulo("13.5","6.5"));
+
     }
 }

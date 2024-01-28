@@ -8,7 +8,7 @@ public class Geometry {
     // terorema de pitagoras
     private Math_op math = new Math_op();
     public float pitagoreas_teorem(int a, int b){
-        int c = 0;
+        float c = 0;
         c = this.math.sqrt(math.resta(math.pow(a), math.pow(b)));
         return c;
     }
@@ -30,7 +30,7 @@ public class Geometry {
 
     public String pitagoreas_teorem(String a, String b){
 
-            if (valid.verificar(a) == "isanumber" && valid.verificar(b) == "isanumber") {
+            if (valid.isanumber(a) == "isanumber" && valid.isanumber(b) == "isanumber") {
                 if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isainteger") {
                     this.auxiliar = Float.toString(pitagoreas_teorem(Integer.parseInt(a), Integer.parseInt(b)));
                 } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isafloat") {
@@ -109,7 +109,7 @@ public class Geometry {
             else { this.auxiliar = Float.toString(area_del_circulo(Float.parseFloat(a)));}
         }
         else {
-            System.out.println("No se puede realizar la operacion!!!");
+            System.out.println("la operacion no se puede realizar con los datos proporcionados!!!");
         }
         return auxiliar;
     }

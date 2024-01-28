@@ -21,7 +21,7 @@ public class Ejercicio_5 {
 
     public Ejercicio_5(){
         System.out.println("-".repeat(21) + "\n" +
-                "-".repeat(4) +  " Ejercicio_4 " + "-".repeat(4) + "\n" +
+                "-".repeat(4) +  " Ejercicio_5 " + "-".repeat(4) + "\n" +
                 "-".repeat(21) + "\n" + "Calular el area de un terreno");
         System.out.print("El area total del terreno es: " + Calcular_area());
     }
@@ -30,18 +30,25 @@ public class Ejercicio_5 {
         try {
             System.out.print("Ingrese el lado a del terreno: ");
             this.lado_a = input.readLine();
-            System.out.print("\n");
             System.out.print("Ingrese el lado b del terreno: ");
             this.lado_b = input.readLine();
-            System.out.print("\n");
             System.out.print("Ingrese el lado c del terreno: ");
             this.lado_c = input.readLine();
-            System.out.print("\n");
         } catch (IOException e){
             System.out.println("Error " + e);
         }
-        String resultado = math.sumar(geo.area_del_rectangulo(this.lado_c,this.lado_b),
-                        geo.area_del_triangulo(math.resta(this.lado_a,this.lado_c),this.lado_b));
+        String resultado = math.sumar(
+                                        geo.area_del_rectangulo(
+                                                this.lado_c,this.lado_b
+                                        )
+                                        ,geo.area_del_triangulo(
+                                                math.resta(
+                                                        this.lado_a,
+                                                        this.lado_b
+                                                )
+                                                ,this.lado_b
+                )
+        );
         return resultado;
 
     }

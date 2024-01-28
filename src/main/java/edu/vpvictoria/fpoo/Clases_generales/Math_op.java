@@ -6,7 +6,7 @@ public class Math_op {
     private validador valid = new validador();
     private String auxiliar = null;
 
-    // Metodos de multipliacion entre enteros y flotantes
+    // Metodos de suma entre enteros y flotantes
     public int sumar(int a, int b){ // suma de dos enteros
         return a + b;
     }
@@ -17,7 +17,6 @@ public class Math_op {
     public float sumar(float a, int b){ return a + b; }
 
     public String sumar(String a, String b) {
-        auxiliar = null;
 
         if (valid.isanumber(a) == "isanumber" && valid.isanumber(b) == "isanumber") {
 
@@ -27,7 +26,7 @@ public class Math_op {
                 auxiliar = Float.toString(sumar(Float.parseFloat(a), Float.parseFloat(b)));
             } else if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isafloat") {
                 auxiliar = Float.toString(sumar(Integer.parseInt(a), Float.parseFloat(b)));
-            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainterger") {
+            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainteger") {
                 auxiliar = Float.toString(sumar(Float.parseFloat(a), Integer.parseInt(b)));
             }
 
@@ -48,7 +47,6 @@ public class Math_op {
     public float resta(float a, int b){ return a - b; }
 
     public String resta(String a, String b) {
-        auxiliar = null;
 
         if (valid.isanumber(a) == "isanumber" && valid.isanumber(b) == "isanumber") {
 
@@ -58,7 +56,7 @@ public class Math_op {
                 auxiliar = Float.toString(resta(Float.parseFloat(a), Float.parseFloat(b)));
             } else if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isafloat") {
                 auxiliar = Float.toString(resta(Integer.parseInt(a), Float.parseFloat(b)));
-            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainterger") {
+            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainteger") {
                 auxiliar = Float.toString(resta(Float.parseFloat(a), Integer.parseInt(b)));
             }
 
@@ -74,14 +72,12 @@ public class Math_op {
 
     public float multiplication(float a, float b){return a*b;}
 
-    public float multipication(float a, float b){return a*b;}
-
     public float multiplication(int a, float b){ return a*b;}
 
     public float multiplication(float a, int b){return a * b;}
 
     public String multiplication(String a, String b) {
-        auxiliar = null;
+
         if (valid.isanumber(a) == "isanumber" && valid.isanumber(b) == "isanumber") {
             if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isainteger") {
                 auxiliar = Integer.toString(multiplication(Integer.parseInt(a), Integer.parseInt(b)));
@@ -89,9 +85,39 @@ public class Math_op {
                 auxiliar = Float.toString(multiplication(Float.parseFloat(a), Float.parseFloat(b)));
             } else if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isafloat") {
                 auxiliar = Float.toString(multiplication(Integer.parseInt(a), Float.parseFloat(b)));
-            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainterger") {
+            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainteger") {
                 auxiliar = Float.toString(multiplication(Float.parseFloat(a), Integer.parseInt(b)));
             }
+        }
+        return auxiliar;
+    }
+
+    // Metodos de division entre enteros y flotantes
+    public int div(int a, int b){return a / b;}
+    public float div(float a , float b){ return a / b;}
+    public float div(int a, float b){ return  a / b;}
+    public float div(float a, int b){ return a / b; }
+
+    public String div(String a, String b) {
+
+        if (valid.isanumber(a) == "isanumber" && valid.isanumber(b) == "isanumber") {
+
+            if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isainteger") {
+                if(Integer.parseInt(a) % 2 == 0 && Integer.parseInt(b) % 2 == 0){
+                    auxiliar = Integer.toString(div(Integer.parseInt(a), Integer.parseInt(b)));
+                }else{
+                    auxiliar = Float.toString(div(Float.parseFloat(a),Float.parseFloat(b)));
+                }
+            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isafloat") {
+                auxiliar = Float.toString(div(Float.parseFloat(a), Float.parseFloat(b)));
+            } else if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isafloat") {
+                auxiliar = Float.toString(div(Integer.parseInt(a), Float.parseFloat(b)));
+            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainterger") {
+                auxiliar = Float.toString(div(Float.parseFloat(a), Integer.parseInt(b)));
+            }
+
+        } else {
+            System.out.printf("Los campos necesitados no son numeros");
         }
         return auxiliar;
     }
@@ -102,7 +128,7 @@ public class Math_op {
     public float pow(float a){return (float) Math.pow(a, 2);}
 
     public String pow(String a){
-        auxiliar = null;
+
         if(new validador().verificar(a) == "isainteger"){
             auxiliar = Integer.toString(pow(Integer.parseInt(a)));
         }
@@ -112,14 +138,14 @@ public class Math_op {
         return auxiliar;
     }
     // Raiz
-    public int sqrt(int a){ return (int) Math.sqrt(new Tools().toDouble(a));}
+    public float sqrt(int a){ return (float) Math.sqrt(new Tools().toDouble(a));}
 
     public float sqrt(float a){return (float) Math.sqrt(new Tools().toDouble(a));}
 
     public String sqrt(String a){
-        auxiliar = null;
+   ;
         if(new validador().verificar(a) == "isainteger"){
-            auxiliar = Integer.toString(sqrt(Integer.parseInt(a)));
+            auxiliar = Float.toString(sqrt(Integer.parseInt(a)));
         }
         else if (new validador().verificar(a) == "isafloat"){
             auxiliar = Float.toString(sqrt(Float.parseFloat(a)));

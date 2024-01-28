@@ -13,7 +13,7 @@ public class Ejercicio_6 {
 
     public Ejercicio_6(){
         System.out.println("-".repeat(21) + "\n" +
-                "-".repeat(4) +  " Ejercicio_4 " + "-".repeat(4) + "\n" +
+                "-".repeat(4) +  " Ejercicio_6 " + "-".repeat(4) + "\n" +
                 "-".repeat(21) + "\n" + "Calular el area de una figuara irregular");
                 System.out.print("El el area de la figuara es: " + Calcular_el_area());
     }
@@ -29,9 +29,18 @@ public class Ejercicio_6 {
         }catch (IOException e){
             System.out.println("Error" + e);
         }
-        String resultado = App.math.sumar(
-                App.math.multiplication(App.geo.area_del_triangulo(App.geo.pitagoreas_teorem(this.cat_ady,this.hip),this.hip
-                ),"2"), App.geo.area_del_circulo(this.radio));
+        String resultado = App.tools.round(
+                                App.math.sumar(
+                                        App.math.multiplication(
+                                                App.geo.area_del_triangulo(this.cat_ady,this.hip),
+                                                "2"
+                                        )
+                                        ,App.math.div(
+                                                App.geo.area_del_circulo(this.radio),
+                                                "2"
+                                        )
+                                )
+        );
         return resultado;
     }
 

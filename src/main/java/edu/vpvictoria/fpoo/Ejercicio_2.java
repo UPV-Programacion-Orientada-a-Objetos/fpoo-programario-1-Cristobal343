@@ -33,7 +33,8 @@ public class Ejercicio_2 {
         }
         suma sum = new suma();
         Math_op op = new Math_op();
-        System.out.println("El promedio es igual a: " + op.round(Float.parseFloat(sum.sumar(sum.sumar(calf1,calf2),sum.sumar(calf3,calf4)))/4));
+        System.out.println("El promedio es igual a: " + App.tools.round(   // sumo la suma de de dos caficaciones el resultado lo convierto los divido entre 4
+                Float.toString(Float.parseFloat(sum.sumar(sum.sumar(calf1,calf2),sum.sumar(calf3,calf4)))/4))); // y lo redondeo a dos cifras
     }
 
 }
