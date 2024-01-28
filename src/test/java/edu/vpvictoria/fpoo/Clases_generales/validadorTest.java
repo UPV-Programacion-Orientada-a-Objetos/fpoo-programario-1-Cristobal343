@@ -10,6 +10,7 @@ public class validadorTest extends TestCase {
 
     public void testVerificar() {
         validador val = new validador();
+        assertEquals("isanumber", val.isanumber("2.55"));
         assertEquals("isanumber", val.isanumber("8.999999999"));
         assertEquals("isanumber", val.isanumber("10"));
         assertEquals("isn'tanumber", val.isanumber("efe"));

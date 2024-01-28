@@ -15,7 +15,8 @@ public class App {
             case "2": new Ejercicio_2(); break;
             case "3": new Ejercicio_3(); break;
             case "4": new Ejercicio_4(); break;
-            default: System.out.printf("opcion no valida"); break;
+            case "5": new Ejercicio_5(); break;
+            default: System.out.print("opcion no valida"); break;
         }
     }
 }
