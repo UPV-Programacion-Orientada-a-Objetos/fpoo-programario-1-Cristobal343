@@ -13,11 +13,11 @@ public class Ejercicio_4 {
             System.out.println("-".repeat(21) + "\n" +
                     "-".repeat(4) +  " Ejercicio_4 " + "-".repeat(4) + "\n" +
                     "-".repeat(21) + "\n" + "Calular el area de un circulo");
-            Calculara_area();
+            System.out.println("El area de el circulo es: " + Calculara_area());
 
     }
 
-    public void Calculara_area(){
+    public String Calculara_area(){
         this.auxiliar = null;
         try {
             System.out.print("Ingrese el radio de la circunferencia: ");
@@ -26,7 +26,7 @@ public class Ejercicio_4 {
             System.out.println("Error " + e);
         }
         auxiliar = new Math_op().multiplication(this.pi, new Math_op().pow(this.radio));
-        System.out.println("El area de el circulo es: " + auxiliar);
+        return auxiliar;
     }
 
 

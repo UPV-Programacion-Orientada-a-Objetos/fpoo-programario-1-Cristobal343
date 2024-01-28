@@ -126,9 +126,5 @@ public class Math_op {
         }
         return auxiliar;
     }
-    // Redondeo
-    public double round(float a){
-        return (double) Math.round(a * 100.0)/100.0;
-    }
 
 }

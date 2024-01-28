@@ -1,4 +1,7 @@
 package edu.vpvictoria.fpoo;
+import edu.vpvictoria.fpoo.Clases_generales.Geometry;
+import edu.vpvictoria.fpoo.Clases_generales.Math_op;
+
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,9 +10,12 @@ import java.io.InputStreamReader;
  *
  */
 public class App {
+
+    public static final BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+    public static final Geometry geo = new Geometry(); // solamete lo utilizo para no tener que crear intancia de la clas cada vez que la
+    public static final Math_op math = new Math_op(); // ocupe, ¿porque?, bueno no puedo llamar a la clase si solo tengo metodos de instancia xd
     public static void main(String[] args) throws IOException {
         System.out.printf("Programario unidad uno \nElija el ejercicio: ");
-        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         switch(input.readLine()){
             case "1": new Ejercicio_1().operacion(); break;
             case "2": new Ejercicio_2(); break;
