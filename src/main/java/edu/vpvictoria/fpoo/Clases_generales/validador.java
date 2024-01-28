@@ -3,10 +3,6 @@ import java.math.BigDecimal;
 public class validador{
 
 
-
-    public String Digitformat(String a){
-
-    }
     public String isanumber(String a){
         String errmessage = null;
         try {

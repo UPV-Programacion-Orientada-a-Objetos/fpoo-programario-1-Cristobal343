@@ -13,6 +13,8 @@ public class App {
         switch(input.readLine()){
             case "1": new Ejercicio_1().operacion(); break;
             case "2": new Ejercicio_2(); break;
+            case "3": new Ejercicio_3(); break;
+            case "4": new Ejercicio_4(); break;
             default: System.out.printf("opcion no valida"); break;
         }
     }
