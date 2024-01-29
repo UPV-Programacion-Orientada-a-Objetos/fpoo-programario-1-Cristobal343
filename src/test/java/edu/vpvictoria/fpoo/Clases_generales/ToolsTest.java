@@ -12,20 +12,6 @@ public class ToolsTest extends TestCase {
         Tools tools = new Tools();
         assertEquals("2.22",tools.round("2.22222"));
         assertEquals(3, tools.round_upper(2.33f));
-    }
-
-    public void testTestToDouble() {
-    }
-
-    public void testToFloat() {
-    }
-
-    public void testTestToFloat() {
-    }
-
-    public void testTestToDouble1() {
-    }
-
-    public void testRound() {
+        assertEquals("0.15", tools.iva("15"));
     }
 }

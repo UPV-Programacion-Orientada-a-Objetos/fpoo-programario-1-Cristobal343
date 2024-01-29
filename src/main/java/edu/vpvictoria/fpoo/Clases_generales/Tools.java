@@ -35,4 +35,12 @@ public class Tools {
         return (int) Math.ceil(a);
     }
 
+    public String iva(String a){
+        String iva = null; // Iva
+        if(Integer.parseInt(a) >= 100){
+            iva = a.substring(0) + "." + a.substring(1,2); // concateno el primer elemento agreando un .
+        }else { iva = "0." + a;}                                // para representar el porcenteje en punto decimal
+        return iva;
+    }
+
 }

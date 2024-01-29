@@ -39,6 +39,12 @@ public class App {
             case "18": new Ejercicio_18(); break;
             case "19": new Ejercicio_19(); break;
             case "20": new Ejercicio_20(); break;
+            case "21": new Ejercicio_21(); break;
+            case "22": new Ejercicio_22(); break;
+            case "23": new Ejercicio_23(); break;
+            case "24": new Ejercicio_24(); break;
+            case "25": new Ejercicio_25(); break;
+            case "26": new Ejercicio_26(); break;
             default: System.out.print("opcion no valida"); break;
         }
     }
