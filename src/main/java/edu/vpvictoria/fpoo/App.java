@@ -30,6 +30,7 @@ public class App {
             case "8": new Ejercicio_8(); break;
             case "9": new Ejercicio_9(); break;
             case "10": new Ejercicio_10(); break;
+            case "11": new Ejercicio_11(); break;
             default: System.out.print("opcion no valida"); break;
         }
     }
