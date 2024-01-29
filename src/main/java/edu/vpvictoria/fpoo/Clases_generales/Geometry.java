@@ -7,6 +7,47 @@ public class Geometry {
 
     // terorema de pitagoras
     private Math_op math = new Math_op();
+
+    public float pitagoreas_teorem_f1(int a, int b){
+        float c = 0f;
+        c = this.math.sqrt(math.sumar(math.pow(a), math.pow(b)));
+        return c;
+    }
+    public float pitagoreas_teorem_f1(float a, float b){
+        float c = 0f;
+        c = this.math.sqrt(math.sumar(math.pow(a), math.pow(b)));
+        return c;
+    }
+    public float pitagoras_teorem_f1(int a, float b){
+        float c = 0f;
+        c = this.math.sqrt(math.sumar(math.pow(a), math.pow(b)));
+        return c;
+    }
+    public float pitagoras_teorem_f1(float a, int b){
+        float c = 0f;
+        c = this.math.sqrt(math.sumar(math.pow(a), math.pow(b)));
+        return c;
+    }
+
+    public String pitagoras_teorem_f1(String a, String b){
+
+        if (valid.isanumber(a) == "isanumber" && valid.isanumber(b) == "isanumber") {
+            if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isainteger") {
+                this.auxiliar = Float.toString(pitagoreas_teorem_f1(Integer.parseInt(a), Integer.parseInt(b)));
+            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isafloat") {
+                this.auxiliar = Float.toString(pitagoreas_teorem_f1(Float.parseFloat(a), Float.parseFloat(b)));
+            } else if (valid.verificar(a) == "isainteger" && valid.verificar(b) == "isafloat") {
+                this.auxiliar = Float.toString(pitagoras_teorem_f1(Integer.parseInt(a), Float.parseFloat(b)));
+            } else if (valid.verificar(a) == "isafloat" && valid.verificar(b) == "isainterger") {
+                this.auxiliar = Float.toString(pitagoras_teorem_f1(Float.parseFloat(a), Integer.parseInt(b)));
+            }
+        } else {
+            System.out.println("la operacion no se puede realizar con los dato proporcionados!!!");
+        }
+        return auxiliar;
+    }
+
+    // Metodos de formula pitagorica de la forma A² = C² - B²
     public float pitagoreas_teorem(int a, int b){
         float c = 0;
         c = this.math.sqrt(math.resta(math.pow(a), math.pow(b)));
