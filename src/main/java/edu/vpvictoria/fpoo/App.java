@@ -18,7 +18,7 @@ public class App {
 
     public static final Tools tools = new Tools();
     public static void main(String[] args) throws IOException {
-        System.out.printf("Programario unidad uno \nElija el ejercicio: ");
+        System.out.printf("Programario unidad uno \nElija el ejercicio [1-26]: ");
         switch(input.readLine()){
             case "1": new Ejercicio_1().operacion(); break;
             case "2": new Ejercicio_2(); break;
@@ -31,6 +31,9 @@ public class App {
             case "9": new Ejercicio_9(); break;
             case "10": new Ejercicio_10(); break;
             case "11": new Ejercicio_11(); break;
+            case "12": new Ejercicio_12(); break;
+            case "13": new Ejercicio_13(); break;
+            case "15": new Ejercicio_15(); break;
             default: System.out.print("opcion no valida"); break;
         }
     }

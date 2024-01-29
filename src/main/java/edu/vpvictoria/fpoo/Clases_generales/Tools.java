@@ -31,4 +31,8 @@ public class Tools {
         return float_roudn.format(toDouble(a));
     }
 
+    public int round_upper(float a){
+        return (int) Math.ceil(a);
+    }
+
 }
